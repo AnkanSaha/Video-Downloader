@@ -43,6 +43,9 @@ body{
     width: 100vw;
     bottom: 2vh;
 }
+#downloadButton{
+    display: none;
+}
 
 @media(min-width: 705px){
     #thumbnail{

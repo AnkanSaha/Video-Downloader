@@ -9,6 +9,7 @@ SubmissionBtn.addEventListener('click', ()=>{
         document.getElementById('spinner').style.display = 'block'
         document.getElementById('UserSubmit').disabled = true;
         document.getElementById('UserSubmit').innerText = 'Checking ...'
+        document.getElementById('downloadButton').style.display = 'none'
     var FinalReqData = {link:UserLink}
     console.log('Data Ready To Send To Server')
     fetch('/YouTubeVideo',{
@@ -20,7 +21,7 @@ SubmissionBtn.addEventListener('click', ()=>{
     }).then(response=> response.json()).then(response=>{
         console.log(response)
         if(response.DownloadLink != 'Unknown error in server'){
-            document.getElementById('UserSubmit').disabled = false;
+        document.getElementById('UserSubmit').disabled = false;
         document.getElementById('spinner').style.display = 'none'
         document.getElementById('downloadButton').href =response.DownloadLink
         document.getElementById('downloadLink').style.display = 'block'
@@ -30,6 +31,7 @@ SubmissionBtn.addEventListener('click', ()=>{
         document.getElementById('thumbnail').src = response.thumbnail
         document.getElementById('UserInputedLink').value = ''
         document.getElementById('UserSubmit').innerText = 'Check Video Availity'
+        document.getElementById('downloadButton').style.display = 'block'
         }
         else if(response.DownloadLink == 'Unknown error in server'){
             document.getElementById('UserSubmit').disabled = false;
@@ -39,6 +41,7 @@ SubmissionBtn.addEventListener('click', ()=>{
             document.getElementById('ErrorMsg').style.display = 'block'
             document.getElementById('UserInputedLink').value = ''
             document.getElementById('UserSubmit').innerText = 'Check Video Availity'
+            document.getElementById('downloadButton').style.display = 'none'
         }
     })
 }

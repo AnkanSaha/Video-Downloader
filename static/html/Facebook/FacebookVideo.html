@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Your Favourite Facebook Video Instantly || AllSave</title>
+    <meta name="description" content="Download Your Favourite Video & Musics Instantly">
+    <meta name="keywords" content="Downloader, Youtube, Instagram, facebook, saveFromNet">
+    <!-- Bootstrap Css  -->
+    <link rel="stylesheet" href="./static/css/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./static/css/Facebook/FacebookVideo.css">
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="./static/images/official_logo.png" type="image/x-icon">
+     <!-- Animation Script  -->
+     <script src="/static/Javascript/General/Animator.js"></script>
+</head>
+<body onload="colorchange('navbar')">
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="./static/images/official_logo.png" alt="official_logo" width="30" height="30" class="d-inline-block align-text-top">
+                    AllSave
+                  </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/YoutubeMusicDownload">YouTube Video To Music Dwonload</a></li>
+                      <li><a class="dropdown-item" href="/YoutubeVideoDownload">Youtube Video Download</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/FacebookVideoDownload">Facebook video Download</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="/InstagramVideoDownload">Instagram Video Download</a></li>
+                    </ul>
+                  </li>
+                  <a class="nav-link active" href="/ContactUs">Contact Us</a>
+                  <a class="nav-link active" href="/About">About</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <div id="inputForm">
+        <div class="col-auto">
+          <label for="inputPassword2" class="visually-hidden">Enter Facebook Video Link</label>
+          <input type="text" class="form-control" id="UserInputedLink" placeholder="Enter / Paste Facebook Video Link">
+        </div>
+        <br>
+        <div class="col-auto">
+          <button id="UserSubmit" type="submit" class="btn btn-primary mb-3">Check Video Availity</button>
+        </div>
+      </div>
+      <div id="spinner">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-dark" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="downloadLink">
+        <a id="downloadButton" download type="button" class="btn btn-success">Download Now</a>
+      </div>
+      <div id="ErrorMsg">
+        <h1 id="FinalErrorMsg"></h1>
+      </div>
+    </main>
+</body>
+<!-- Bootstrap JS -->
+<script src="./static/css/Bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./static/Javascript/Facebook/FacebookVideo.js"></script>
+</html>

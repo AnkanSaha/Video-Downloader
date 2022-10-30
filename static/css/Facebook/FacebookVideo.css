@@ -1,0 +1,46 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+main div{
+
+    color: aliceblue;
+
+}
+body{
+    /* background:#4FA3A5; */
+    background-image: linear-gradient(to right, #2E3192, #1BFFFF);
+}
+
+@media (min-width:705px) {
+    main div{
+        border-radius: 10rem 10rem;
+    }
+}
+#inputForm{
+    position: absolute;
+    top: 50vh;
+}
+#spinner{
+    margin-top: 60vh;
+    display: none;
+}
+#downloadLink{
+    position: absolute;
+    top: 73vh;
+    display: none;
+}
+#ErrorMsg{
+    display: none;
+    margin-top: 5vh;
+    color: rgb(41, 65, 37);
+}
+#MusicTitle{
+    display: none;
+    color: green;
+}
+#feet{
+    position:absolute;
+    width: 100vw;
+    bottom: 2vh;
+}

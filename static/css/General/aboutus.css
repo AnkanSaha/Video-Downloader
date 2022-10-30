@@ -1,0 +1,17 @@
+
+body{
+    background-image: linear-gradient(to right, #11998E, #38EF7D);
+}
+
+@media (min-width:705px) {
+    main div{
+        border-radius: 10rem 10rem;
+    }
+}
+main h2{
+    text-align: center;
+    margin-bottom: 6vh;
+}
+main p{
+    margin: 7%;
+}

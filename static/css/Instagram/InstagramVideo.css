@@ -18,21 +18,21 @@ body{
 }
 #inputForm{
     position: absolute;
-    top: 50vh;
+    top: 60vh;
 }
 #spinner{
-    margin-top: 60vh;
+    margin-top: 23vh;
     display: none;
 }
 #downloadLink{
     position: absolute;
-    top: 73vh;
+    top: 80vh;
     display: none;
 }
 #ErrorMsg{
     display: none;
-    margin-top: 5vh;
-    color: rgb(41, 65, 37);
+    margin-top: 17vh;
+    color: rgb(27, 0, 255);
 }
 #MusicTitle{
     display: none;

@@ -50,52 +50,56 @@
           </nav>
     </header>
     <main>
-        <div id="inputForm">
-            <div class="col-auto">
-              <label for="inputPassword2" class="visually-hidden">Enter YouTube Video Link</label>
-              <input type="text" class="form-control" id="UserInputedLink" placeholder="Enter / Paste YouTube Video Link">
-            </div>
-            <br>
-            <div class="col-auto">
-              <button id="UserSubmit" type="submit" class="btn btn-primary mb-3">Check Video Availity</button>
-            </div>
-          </div>
-          <div id="spinner">
-            <div class="spinner-border text-primary" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-secondary" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-success" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-danger" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-warning" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-info" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-light" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-            <div class="spinner-border text-dark" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>
-          <div id="downloadLink">
-            <a id="downloadButton" type="button" class="btn btn-success">Download Now</a>
-          </div>
-          <div id="ErrorMsg">
-            <h1 id="FinalErrorMsg"></h1>
-            <br>
-            <h2 id="MusicTitle"></h2>
-            <br>
-            <img id="thumbnail">
-          </div>
+      <div class="px-5 my-5" id="ErrorMsg">
+        <img id="thumbnail" class="">
+        <br>
+        <br>
+        <h2 id="MusicTitle"></h2>
+        <br>
+        <h3 id="MusicProtocol"></h3>
+        <br>
+
+      </div>
+      <div  id="inputForm" class="my-5">
+        <div class="col-auto">
+          <label for="inputPassword2" class="visually-hidden">Enter YouTube Video Link</label>
+          <input type="text" class="form-control" id="UserInputedLink" placeholder="Enter / Paste YouTube Video Link">
+        </div>
+        <br>
+        <div class="col-auto w-75 m-auto">
+          <button id="UserSubmit" type="submit" class="btn btn-primary">Check Video Availity</button>
+        </div>
+      </div>
+      <div id="downloadLink" class="my-5 mx-5">
+        <a id="downloadButton" type="button" class="btn btn-success">Download Now</a>
+      </div>
+      <div id="spinner" class="position-absolute bottom-29">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-light" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="spinner-border text-dark" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
     </main>
 </body>
 <!-- Bootstrap JS -->

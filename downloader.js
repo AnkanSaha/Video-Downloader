@@ -14,7 +14,5 @@ app.use(cors({origin:'*'})) // Solve The CORS Error in Browser
 app.use(Postrouting)
 app.use(GetRouting)
 
-// Global variables
-const DefPath = `${__dirname}/static/html/`
 //server listening
 app.listen(port, ()=>{console.log(`Server Started on Port No ${port}`)}) 

@@ -2,6 +2,7 @@ function InstaVideoDownloader(Link, responses, requests){
     var instaVideoDownload = require('social-downloader-cherry');
     var SendDataToServer = require('../Server/SendDataToServer');
     instaVideoDownload.Instagram.getAny(Link).then((DownloadableLink)=>{
+        console.log(DownloadableLink)
         var Final_Data = {
             DownloadLink:DownloadableLink.data.body.link,
             status:200,

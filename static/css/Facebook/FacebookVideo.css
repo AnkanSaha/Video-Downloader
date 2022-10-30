@@ -22,7 +22,7 @@ body{
     top: 50vh;
 }
 #spinner{
-    margin-top: 60vh;
+    margin-top: 17vh;
     display: none;
 }
 #downloadLink{
@@ -32,8 +32,8 @@ body{
 }
 #ErrorMsg{
     display: none;
-    margin-top: 5vh;
-    color: rgb(41, 65, 37);
+    margin-top: 16vh;
+    color: rgb(255, 251, 0);
 }
 #MusicTitle{
     display: none;

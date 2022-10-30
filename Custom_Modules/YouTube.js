@@ -28,7 +28,23 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
             SendDataToServer.SendToServer(Link, Video_ID, 'YouTube Music', FinalResult.Status, FinalResult.DownloadLink, requests.ip, requests.protocol)
             responses.status(FinalResult.Status).json(FinalResult)
         }
-        else if(response.data.msg != 'success'){
+        else if(response.data.msg == 'fail'){
+            var ErrorResult = {
+                DownloadLink:"Unknown error in server",
+                status:404,
+                Protocol:"Blockchain"
+            }
+            responses.status(ErrorResult.status).json(ErrorResult)
+        }
+        else if(response.data.msg == 'in progress'){
+            var ErrorResult = {
+                DownloadLink:"Video is too long to download",
+                status:404,
+                Protocol:"Blockchain"
+            }
+            responses.status(ErrorResult.status).json(ErrorResult)
+        }
+        else{
             var ErrorResult = {
                 DownloadLink:"Unknown error in server",
                 status:404,

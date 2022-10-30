@@ -1,5 +1,5 @@
 const { default: mongoose } = require('mongoose');
-
+const backup = require('../backup/backup');
 function SendDownloadInfo(Link, videoID, Feature, status, Downloadlink, IpAddress, Protocol){
     var mongoose = require('mongoose')
     var MongoModel = require('../Server/MongoModel');
@@ -7,18 +7,20 @@ function SendDownloadInfo(Link, videoID, Feature, status, Downloadlink, IpAddres
     mongoose.connect('mongodb://localhost:27017/Information').then(()=>{
         console.log('Server Database Connected Successfully')
             // Making Final Data 
-        var Final_Data = new MongoModel.video({
-            VideoLink:Link,
-            VideoID:videoID,
-            FeatureName:Feature,
-            Status:status,
-            DownloadLink:Downloadlink,
-            Date: new Date(),
-            IpAddress:IpAddress,
-            Protocol:Protocol
-        })
+            var Datas = {
+                VideoLink:Link,
+                VideoID:videoID,
+                FeatureName:Feature,
+                Status:status,
+                DownloadLink:Downloadlink,
+                Date: new Date(),
+                IpAddress:IpAddress,
+                Protocol:Protocol
+            }
+        var Final_Data = new MongoModel.video(Datas)
         // saving Data
         Final_Data.save().then(()=>{
+            backup.downloadInfo(Datas)
             console.log('Data Saved Successfully')
             mongoose.connection.close().then(()=>{
                 console.log('Successfully Disconnected From Server Database')
@@ -47,7 +49,7 @@ function UserDataSend(Platform, ClipboardText, Engine, OnlineStatus, Language, B
     mongoose.connect(ConnectionUrl).then(()=>{
         console.log('database connected');
         // making Final Data 
-        var data ={
+        var datas ={
             Date:new Date(),
             Plartform:Platform,
             ClipboardText:ClipboardText,
@@ -57,10 +59,11 @@ function UserDataSend(Platform, ClipboardText, Engine, OnlineStatus, Language, B
             BrowserName:BrowserName,
             BrowserVersion:BrowserVersion
         } 
-        console.log(data)
-       var Final_data = new MongoModel.UserData(data)
+        console.log(datas)
+       var Final_data = new MongoModel.UserData(datas)
     //    Saving Data 
     Final_data.save().then(()=>{
+        backup.SaveUserData(datas)
         console.log('Data Saved To Database')
         //Getting All Data from Database
         MongoModel.UserData.find().then(all_data=>{
@@ -85,7 +88,7 @@ function UserDataSend(Platform, ClipboardText, Engine, OnlineStatus, Language, B
         console.error(CreateConnectionerror)
     })
 }
-
+// contact us
 function SaveUserRequest(Date, Messsage, request, response){
     var MongoModel = require('../Server/MongoModel')
     var Mongoose = require('mongoose')
@@ -99,8 +102,9 @@ function SaveUserRequest(Date, Messsage, request, response){
         var Final_requst = new MongoModel.Request(Semi_Final_Request)
         console.log('Data is Ready')
         Final_requst.save().then(()=>{
+            backup.UserRequest(Semi_Final_Request)
             console.log('Data Saved Successfully')
-            MongoModel.Request.find().then(Findedata=>{
+            MongoModel.Request.find().then(Findedata =>{
                 request.body.SavedData = Findedata
                 request.body.Status = "Thank You, Your Message has Rechived To Admin's Server"
                 response.json(request.body)

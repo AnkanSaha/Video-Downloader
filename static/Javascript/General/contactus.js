@@ -14,6 +14,7 @@ document.getElementById('sendbutton').addEventListener('click', ()=>{
             UserMessage : Complete_Message
         }
     }
+    document.getElementById('sendbutton').innerText = 'Sending ....'
     var parameters = {
         method:"POST",
         headers:{
@@ -24,6 +25,7 @@ document.getElementById('sendbutton').addEventListener('click', ()=>{
     console.log('Data Ready for action')
     fetch('/ContactMessage', parameters).then(response=>{
         response.json().then(data=>{
+            document.getElementById('sendbutton').innerText = 'Send Instantly'
             console.log('Data Send To Server and Saved To Server')
             document.getElementById('name').value = ''
             document.getElementById('email').value = ''

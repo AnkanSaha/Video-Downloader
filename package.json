@@ -4,9 +4,9 @@
   "description": "This website can download any youtube, facebook, instagram video instantly",
   "main": "downloader.js",
   "scripts": {
-    "deploy": "pm2 start downloader.js --name Downloader",
+    "start": "pm2 start downloader.js --name Downloader",
     "stop": "pm2 stop downloader.js --name Downloader",
-    "devstart": "nodemon downloader.js",
+    "dev": "nodemon downloader.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,7 +32,7 @@
     "mongoose": "^6.5.4",
     "nodemon": "^2.0.19",
     "path": "^0.12.7",
-    "pm2": "^5.2.0",
+    "pm2": "^5.2.2",
     "postcss": "^8.4.16",
     "social-downloader-cherry": "^1.0.0",
     "tailwindcss": "^3.1.8",

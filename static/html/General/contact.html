@@ -1,88 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us - Download Your Favourite Instagram Video Instantly || AllSave</title>
-    <meta name="description" content="Download Your Favourite Video & Musics Instantly">
-    <meta name="keywords" content="Downloader, Youtube, Instagram, facebook, saveFromNet">
-    <!-- Bootstrap Css  -->
-    <link rel="stylesheet" href="./static/css/Bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/css/General/contact.css">
-    <!-- Favicon  -->
-    <link rel="shortcut icon" href="./static/images/official_logo.png" type="image/x-icon">
-         <!-- Animation Script  -->
-         <script src="/static/Javascript/General/Animator.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact us - Download Your Favourite Instagram Video Instantly || AllSave</title>
+  <meta name="description" content="Download Your Favourite Video & Musics Instantly">
+  <meta name="keywords" content="Downloader, Youtube, Instagram, facebook, saveFromNet">
+  <!-- Bootstrap Css  -->
+  <link rel="stylesheet" href="./static/css/Bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/css/General/contact.css">
+  <!-- Favicon  -->
+  <link rel="shortcut icon" href="./static/images/official_logo.png" type="image/x-icon">
+  <!-- Animation Script  -->
+  <script src="/static/Javascript/General/Animator.js"></script>
 </head>
+
 <body onload="colorchange('navbar')">
   <header>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="./static/images/official_logo.png" alt="official_logo" width="30" height="30" class="d-inline-block align-text-top">
-                AllSave
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="./static/images/official_logo.png" alt="official_logo" width="30" height="30"
+            class="d-inline-block align-text-top">
+          AllSave
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="/" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Services
               </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Services
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/YoutubeMusicDownload">YouTube Video To Music Dwonload</a></li>
-                  <li><a class="dropdown-item" href="/YoutubeVideoDownload">Youtube Video Download</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/FacebookVideoDownload">Facebook video Download</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="/InstagramVideoDownload">Instagram Video Download</a></li>
-                </ul>
-              </li>
-              <a class="nav-link active" href="/ContactUs">Contact Us</a>
-              <a class="nav-link active" href="/About">About</a>
-            </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/YoutubeMusicDownload">YouTube Video To Music Dwonload</a></li>
+                <li><a class="dropdown-item" href="/YoutubeVideoDownload">Youtube Video Download</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/FacebookVideoDownload">Facebook video Download</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/InstagramVideoDownload">Instagram Video Download</a></li>
+              </ul>
+            </li>
+            <a class="nav-link active" href="/ContactUs">Contact Us</a>
+            <a class="nav-link active" href="/About">About</a>
           </div>
         </div>
-      </nav>
-</header>
-    <main>
-      <h1>Contact With Administrator</h1>
-      <div id="contactform">
-        <div id="form" class="form-floating mb-3">
-          <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
-          <label for="name">Enter Your Name</label>
-        </div>
-        <div class="form-floating">
-          <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address">
-          <label for="email">Enter Your Email Address</label>
-        </div>
-        <br>
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Leave a comment here" id="queries" style="height: 100px"></textarea>
-          <label for="queries">Enter Your queries here ...</label>
-        </div>
-        <br>
-        <button id="sendbutton" class="btn btn-danger">Send Instantly</button>
-        <div id="successfull"></div>
-    </main>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-muted">© 2022 AllSave Technologies, Inc</p>
-  
-      <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="/static/images/official_logo.png"></use></svg>
-      </a>
-  
-      <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="/" class="nav-link px-2 text-muted colortext">Home</a></li>
-        <li class="nav-item"><a href="/About" class="nav-link px-2 text-muted colortext">About</a></li>
-        <li class="nav-item"><a href="/ContactUs" class="nav-link px-2 text-muted colortext">Contact Us</a></li>
-      </ul>
-    </footer>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact With Administrator</h1>
+    <div id="contactform">
+      <div id="form" class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+        <label for="name">Enter Your Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address">
+        <label for="email">Enter Your Email Address</label>
+      </div>
+      <br>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="queries" style="height: 100px"></textarea>
+        <label for="queries">Enter Your queries here ...</label>
+      </div>
+      <br>
+      <button id="sendbutton" class="btn btn-danger">Send Instantly</button>
+      <div id="successfull"></div>
+  </main>
+  <a class="position-relative start-50" href="//www.dmca.com/Protection/Status.aspx?ID=57ffc8c5-e794-45c8-bc36-4a27a4237c9f" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca_protected_10_120.png?ID=57ffc8c5-e794-45c8-bc36-4a27a4237c9f"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022 AllSave Technologies, Inc</p>
+
+    <a href="/"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="/static/images/official_logo.png"></use>
+      </svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="/" class="nav-link px-2 text-muted colortext">Home</a></li>
+      <li class="nav-item"><a href="/About" class="nav-link px-2 text-muted colortext">About</a></li>
+      <li class="nav-item"><a href="/ContactUs" class="nav-link px-2 text-muted colortext">Contact Us</a></li>
+    </ul>
+  </footer>
 </body>
 <script src="./static/Javascript/General/contactus.js"></script>
 <!-- Bootstrap JS -->
 <script src="./static/css/Bootstrap/bootstrap.bundle.min.js"></script>
+
 </html>

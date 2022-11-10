@@ -1,19 +1,19 @@
-body{
-    background-image: url('./static/images/bg.jpg');
-    background-repeat: no-repeat;
-    background-size:cover;
+body {
+  background-image: url("./static/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#typewritter{
-    margin-top: 5vh;
-    width: 100vw;
-    text-align: center;
-    color: aliceblue;
+#typewritter {
+  margin-top: 5vh;
+  width: 100vw;
+  text-align: center;
+  color: aliceblue;
 }
-#typewritter h1{
-    font-size: 5vw;
+#typewritter h1 {
+  font-size: 5vw;
 }
-.auto-type{
-  font-family:Arial, Helvetica, sans-serif;
+.auto-type {
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-style: italic;
 }

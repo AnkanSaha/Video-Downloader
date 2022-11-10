@@ -1,30 +1,30 @@
-
-body{
-    background-image: linear-gradient(to left, #009245, #FCEE10);
+body {
+  background-image: linear-gradient(to left, #009245, #fcee10);
 }
 
-@media (min-width:705px) {
-    main div{
-        border-radius: 10rem 10rem;
-    }
+@media (min-width: 705px) {
+  main div {
+    border-radius: 10rem 10rem;
+  }
 }
-#contactform{
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    width: 80vw;
-    /* height: 50vh; */
-    margin-left: 10vw;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+#contactform {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  width: 80vw;
+  /* height: 50vh; */
+  margin-left: 10vw;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
-main > h1{
-    margin-top: 5vh;
-    font-size: xx-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
+main > h1 {
+  margin-top: 5vh;
+  font-size: xx-large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
 }

@@ -1,46 +1,44 @@
-main{
-    display: flex;
-    justify-content: center;
+main {
+  display: flex;
+  justify-content: center;
 }
-main div{
-
-    color: aliceblue;
-
+main div {
+  color: aliceblue;
 }
-body{
-    /* background:#4FA3A5; */
-    background-image: linear-gradient(to right, #2E3192, #1BFFFF);
+body {
+  /* background:#4FA3A5; */
+  background-image: linear-gradient(to right, #2e3192, #1bffff);
 }
 
-@media (min-width:705px) {
-    main div{
-        border-radius: 10rem 10rem;
-    }
+@media (min-width: 705px) {
+  main div {
+    border-radius: 10rem 10rem;
+  }
 }
-#inputForm{
-    position: absolute;
-    top: 50vh;
+#inputForm {
+  position: absolute;
+  top: 50vh;
 }
-#spinner{
-    margin-top: 17vh;
-    display: none;
+#spinner {
+  margin-top: 17vh;
+  display: none;
 }
-#downloadLink{
-    position: absolute;
-    top: 73vh;
-    display: none;
+#downloadLink {
+  position: absolute;
+  top: 73vh;
+  display: none;
 }
-#ErrorMsg{
-    display: none;
-    margin-top: 16vh;
-    color: rgb(255, 251, 0);
+#ErrorMsg {
+  display: none;
+  margin-top: 16vh;
+  color: rgb(255, 251, 0);
 }
-#MusicTitle{
-    display: none;
-    color: green;
+#MusicTitle {
+  display: none;
+  color: green;
 }
-#feet{
-    position:absolute;
-    width: 100vw;
-    bottom: 2vh;
+#feet {
+  position: absolute;
+  width: 100vw;
+  bottom: 2vh;
 }

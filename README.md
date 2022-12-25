@@ -23,7 +23,7 @@ Ankan Saha made YouTube, facebook, Instagram video Downloader using NodeJS and m
 To deploy this project run
 
 ```bash
-  npm run start
+  npm run deploy
 ```
 
 

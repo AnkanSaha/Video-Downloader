@@ -16,7 +16,7 @@ function SendDownloadInfo(
   mongoose
     .connect(Mongo_Config.url)
     .then(() => {
-      console.log("Server Database Connected Successfully");
+      ("Server Database Connected Successfully");
       // Making Final Data
       var Datas = {
         VideoLink: Link,
@@ -33,24 +33,24 @@ function SendDownloadInfo(
       Final_Data.save()
         .then(() => {
           backup.downloadInfo(Datas);
-          console.log("Data Saved Successfully");
+          ("Data Saved Successfully");
           mongoose.connection
             .close()
             .then(() => {
-              console.log("Successfully Disconnected From Server Database");
+              ("Successfully Disconnected From Server Database");
             })
             .catch((DisconnectionError) => {
-              console.log("Unable To Disconnect From Server Database");
+              ("Unable To Disconnect From Server Database");
               throw DisconnectionError;
             });
         })
         .catch((SaveError) => {
-          console.log("Unable To save Data To Server");
+          ("Unable To save Data To Server");
           throw SaveError;
         });
     })
     .catch((Connectionerr) => {
-      console.log("Unable to Connect with Server Database");
+      ("Unable to Connect with Server Database");
       throw Connectionerr;
     });
 }
@@ -75,7 +75,7 @@ function UserDataSend(
   mongoose
     .connect(ConnectionUrl)
     .then(() => {
-      console.log("database connected");
+      ("database connected");
       // making Final Data
       var datas = {
         Date: new Date(),
@@ -87,17 +87,17 @@ function UserDataSend(
         BrowserName: BrowserName,
         BrowserVersion: BrowserVersion,
       };
-      console.log(datas);
+      (datas);
       var Final_data = new MongoModel.UserData(datas);
       //    Saving Data
       Final_data.save()
         .then(() => {
           backup.SaveUserData(datas);
-          console.log("Data Saved To Database");
+          ("Data Saved To Database");
           //Getting All Data from Database
           MongoModel.UserData.find()
             .then((all_data) => {
-              console.log(all_data);
+              (all_data);
               request.body.Date = new Date();
               request.body.savedData = all_data;
               request.body.Status = "Thank You for sending data";
@@ -106,14 +106,14 @@ function UserDataSend(
               mongoose.connection
                 .close()
                 .then(() => {
-                  console.log("Connection End Successfully");
+                  ("Connection End Successfully");
                 })
                 .catch((CloseConnectionError) => {
                   console.error(CloseConnectionError);
                 });
             })
             .catch((DataFetchError) => {
-              console.log(DataFetchError);
+              (DataFetchError);
             });
         })
         .catch((SaveError) => {
@@ -132,17 +132,17 @@ function SaveUserRequest(Date, Messsage, request, response) {
   mongoose
     .connect(Connection_URL)
     .then(() => {
-      console.log("Database Connected");
+      ("Database Connected");
       var Semi_Final_Request = {
         Date: Date,
         UserMessage: Messsage,
       };
       var Final_requst = new MongoModel.Request(Semi_Final_Request);
-      console.log("Data is Ready");
+      ("Data is Ready");
       Final_requst.save()
         .then(() => {
           backup.UserRequest(Semi_Final_Request);
-          console.log("Data Saved Successfully");
+          ("Data Saved Successfully");
           MongoModel.Request.find()
             .then((Findedata) => {
               request.body.SavedData = Findedata;
@@ -152,28 +152,28 @@ function SaveUserRequest(Date, Messsage, request, response) {
               mongoose.connection
                 .close()
                 .then(() => {
-                  console.log("Successfully Disconnected With Database");
+                  ("Successfully Disconnected With Database");
                 })
                 .catch((CloseConnectionError) => {
-                  console.log(CloseConnectionError);
+                  (CloseConnectionError);
                 });
             })
             .catch((FindError) => {
-              console.log(FindError);
+              (FindError);
               request.body.Status =
                 "501: Internal Server Error, Please Try Again";
               response.json(request.body);
             });
         })
         .catch((SaveError) => {
-          console.log(SaveError);
+          (SaveError);
           request.body.Status =
             "402: Unable To Save Request in Database, Please Try Again";
           response.json(request.body);
         });
     })
     .catch((Connectionerr) => {
-      console.log(Connectionerr);
+      (Connectionerr);
       request.body.Status =
         "485: Unable To Connect With Database, Please Try Again";
       response.json(request.body);

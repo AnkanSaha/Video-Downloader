@@ -3,7 +3,7 @@ function InstaVideoDownloader(Link, responses, requests) {
   var SendDataToServer = require("../Server/SendDataToServer");
   instaVideoDownload.Instagram.getAny(Link)
     .then((DownloadableLink) => {
-      console.log(DownloadableLink);
+      (DownloadableLink);
       var Final_Data = {
         DownloadLink: DownloadableLink.data.body.link,
         status: 200,
@@ -22,7 +22,7 @@ function InstaVideoDownloader(Link, responses, requests) {
       responses.status(Final_Data.status).json(Final_Data);
     })
     .catch((Error) => {
-      console.log(Error);
+      (Error);
       var Error_Data = {
         DownloadLink: "Unable To Get Video from server",
         status: 500,

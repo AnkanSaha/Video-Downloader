@@ -1,4 +1,4 @@
-console.log("YouTube Music Downloader Client Side JavaScript has enabled");
+("YouTube Music Downloader Client Side JavaScript has enabled");
 const SubmitButton = document.getElementById("UserSubmit");
 SubmitButton.addEventListener("click", () => {
   var UserLink = document.getElementById("UserInputedLink").value;
@@ -7,7 +7,7 @@ SubmitButton.addEventListener("click", () => {
     document.getElementById("ErrorMsg").style.display = "none";
     document.getElementById("spinner").style.display = "block";
     var FinalUserLinkData = { link: UserLink };
-    console.log("Data Ready To Send To Server");
+    ("Data Ready To Send To Server");
     document.getElementById("UserSubmit").disabled = true;
     document.getElementById("UserSubmit").innerText = "Checking ...";
     fetch("/instavidodwnlod", {
@@ -19,7 +19,7 @@ SubmitButton.addEventListener("click", () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log("Data Processing Completed");
+        ("Data Processing Completed");
         if (json.DownloadLink != "Unable To Get Video from server") {
           document.getElementById("spinner").style.display = "none";
           document.getElementById("downloadButton").href = json.DownloadLink;

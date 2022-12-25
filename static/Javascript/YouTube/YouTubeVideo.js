@@ -1,4 +1,4 @@
-console.log("YouTube Video Downloader Client Side JavaScript has enabled");
+("YouTube Video Downloader Client Side JavaScript has enabled");
 const SubmissionBtn = document.getElementById("UserSubmit");
 SubmissionBtn.addEventListener("click", () => {
   var UserLink = document.getElementById("UserInputedLink").value;
@@ -11,7 +11,7 @@ SubmissionBtn.addEventListener("click", () => {
     document.getElementById("UserSubmit").innerText = "Checking ...";
     document.getElementById("downloadButton").style.display = "none";
     var FinalReqData = { link: UserLink };
-    console.log("Data Ready To Send To Server");
+    ("Data Ready To Send To Server");
     fetch("/YouTubeVideo", {
       method: "POST",
       body: JSON.stringify(FinalReqData),
@@ -21,7 +21,6 @@ SubmissionBtn.addEventListener("click", () => {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         if (response.DownloadLink != "Unknown error in server") {
           document.getElementById("UserSubmit").disabled = false;
           document.getElementById("spinner").style.display = "none";

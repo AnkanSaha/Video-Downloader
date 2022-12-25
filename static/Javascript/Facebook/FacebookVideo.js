@@ -1,14 +1,14 @@
 const submitbtn = document.getElementById("UserSubmit");
 submitbtn.addEventListener("click", () => {
-  var UserLink = document.getElementById("UserInputedLink").value;
+  let UserLink = document.getElementById("UserInputedLink").value;
   if (UserLink != "") {
     document.getElementById("UserInputedLink").value = "";
     document.getElementById("downloadLink").style.display = "none";
     document.getElementById("ErrorMsg").style.display = "none";
     document.getElementById("spinner").style.display = "block";
     document.getElementById("UserSubmit").disabled = true;
-    var FinalUserLinkData = { link: UserLink };
-    console.log("Data Ready To Send");
+    let FinalUserLinkData = { link: UserLink };
+    ("Data Ready To Send");
     fetch("/fbvideodownload", {
       method: "post",
       body: JSON.stringify(FinalUserLinkData),
@@ -18,7 +18,7 @@ submitbtn.addEventListener("click", () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log("Data Processing Completed");
+        ("Data Processing Completed");
         if (
           json.DownloadLink != "Wrong link or video not found / is private."
         ) {

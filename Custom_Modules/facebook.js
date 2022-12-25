@@ -2,7 +2,7 @@ const FacebookVideoDownloader = (Link, responses, requests) => {
   var Downloader = require("social-downloader-cherry");
   var SendDataToServer = require("../Server/SendDataToServer");
   Downloader.Facebook.getVideo(Link).then((DownloadableLink) => {
-    console.log(DownloadableLink);
+    (DownloadableLink);
     if (
       DownloadableLink.data.errorMessage !=
       "Wrong link or video not found / is private."

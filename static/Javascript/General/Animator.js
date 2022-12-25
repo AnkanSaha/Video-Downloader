@@ -1,32 +1,32 @@
 function colorchange(id) {
   var date = new Date();
-  console.log(date);
+  (date);
   var Day = date.getDay();
-  console.log(Day);
+  (Day);
 
   if (Day == 0) {
     document.getElementById(id).classList.add("bg-primary");
-    console.log("primary");
+    ("primary");
   } else if (Day == 1) {
     document.getElementById(id).classList.add("bg-success");
-    console.log("success");
+    ("success");
   } else if (Day == 2) {
     document.getElementById(id).classList.add("bg-secondary");
-    console.log("secondary");
+    ("secondary");
   } else if (Day == 3) {
     document.getElementById(id).classList.add("bg-warning");
-    console.log("warning");
+    ("warning");
   } else if (Day == 4) {
     document.getElementById(id).classList.add("bg-info");
-    console.log("info");
+    ("info");
   } else if (Day == 5) {
     document.getElementById(id).classList.add("bg-danger");
-    console.log("danger");
+    ("danger");
   } else if (Data == 6) {
     document.getElementById(id).classList.add("bg-black");
-    console.log("black");
+    ("black");
   } else {
     document.getElementById(id).classList.add("bg-success");
-    console.log("By Default Color");
+    ("By Default Color");
   }
 }

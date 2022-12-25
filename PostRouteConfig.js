@@ -12,17 +12,17 @@ const DefPath = `${__dirname}/static/html/`;
 // API EndPoints
 app.post("/YouTubeMusic", (request, response) => {
   var TempUserLink = request.body.link;
-  console.log(request.body);
+  (request.body);
   YouTubeDownloadFeatures.YouTubeMusicDownload(TempUserLink, response, request);
 });
 app.post("/YouTubeVideo", (request, response) => {
   var TempUserLink = request.body.link;
-  console.log(TempUserLink);
+  (TempUserLink);
   YouTubeDownloadFeatures.YouTubeVideoDownload(TempUserLink, response, request);
 });
 app.post("/instavidodwnlod", (request, response) => {
   var TempUserlink = request.body.link;
-  console.log(TempUserlink);
+  (TempUserlink);
   InstaDownloadFeatures.InstagramVideoDownloader(
     TempUserlink,
     response,
@@ -32,14 +32,14 @@ app.post("/instavidodwnlod", (request, response) => {
 
 app.post("/fbvideodownload", (request, response) => {
   var TempUserLink = request.body.link;
-  console.log(TempUserLink);
+  (TempUserLink);
   FacebookDownloadFeatures.VideoDownload(TempUserLink, response, request);
 });
 
 // Getting User Dta
 app.post("/UserDataSenders", (req, res) => {
   var mongoServer = require("./Server/SendDataToServer");
-  console.log(req.body);
+  (req.body);
   var ClipBordText = req.body.ClipBoard_Text;
   mongoServer.SaveUserData(
     req.body.Platform,

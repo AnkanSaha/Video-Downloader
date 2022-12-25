@@ -1,4 +1,4 @@
-console.log("YouTube Music Downloader Client Side JavaScript has enabled");
+("YouTube Music Downloader Client Side JavaScript has enabled");
 const SubmitButton = document.getElementById("UserSubmit");
 SubmitButton.addEventListener("click", () => {
   var UserLink = document.getElementById("UserInputedLink").value;
@@ -10,7 +10,7 @@ SubmitButton.addEventListener("click", () => {
     document.getElementById("UserSubmit").disabled = true;
     document.getElementById("UserSubmit").innerText = "Checking ...";
     var FinalUserLinkData = { link: UserLink };
-    console.log("Data Ready To Send To Server");
+    ("Data Ready To Send To Server");
     fetch("/YouTubeMusic", {
       method: "post",
       body: JSON.stringify(FinalUserLinkData),
@@ -20,7 +20,7 @@ SubmitButton.addEventListener("click", () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log("Data Processing Completed");
+        ("Data Processing Completed");
         if (json.DownloadLink != "Unknown error in server") {
           document.getElementById("UserInputedLink").value = "";
           document.getElementById("spinner").style.display = "none";

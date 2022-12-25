@@ -2,7 +2,7 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
   var SendDataToServer = require("../Server/SendDataToServer");
   var VideoIDer = require("get-youtube-id");
   var Video_ID = VideoIDer(Link);
-  console.log(Video_ID);
+  (Video_ID);
   // requesting server to get download link
   const axios = require("axios");
   const options = {
@@ -15,7 +15,7 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
     },
   };
   axios.request(options).then((response) => {
-    console.log(response);
+    (response);
     if (response.data.msg == "success") {
       var FinalResult = {
         DownloadLink: response.data.link,
@@ -65,7 +65,7 @@ const YouTubeDownloaderVideo = (Link, responses, requests) => {
   var requester = require("axios");
   var SendDataToServer = require("../Server/SendDataToServer");
   var VideoID = getvideoIDer(Link);
-  console.log(VideoID);
+  (VideoID);
   const options = {
     method: "GET",
     url: "https://youtube-video-download-info.p.rapidapi.com/dl",
@@ -79,17 +79,17 @@ const YouTubeDownloaderVideo = (Link, responses, requests) => {
   requester
     .request(options)
     .then(function (response) {
-      console.log(response.data);
+      (response.data);
       if (response.data.status == "ok") {
         let responsedddata = response.data;
         var FinalData = {
-          DownloadLink: responsedddata.link["18"][0],
+          DownloadLink: responsedddata.link["22"][0],
           status: 200,
-          Quality: responsedddata.link["18"][3],
+          Quality: responsedddata.link["247"][3],
           Name: responsedddata.title,
-          ContentLength: responsedddata.link["18"].length,
-          Audio_Available: responsedddata.link["18"][2],
-          File_Extension: responsedddata.link["18"][4],
+          ContentLength: responsedddata.link["247"].length,
+          Audio_Available: responsedddata.link["247"][2],
+          File_Extension: responsedddata.link["247"][4],
           Protocol: "Blockchain",
           thumbnail: responsedddata.thumb,
         };

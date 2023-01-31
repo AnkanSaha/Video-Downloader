@@ -7,7 +7,7 @@ const Postrouting = require("./PostRouteConfig");
 const GetRouting = require("./GetRouteConfig");
 
 // Allowed URLS
-const allowedOrigins = ["localhost:5500", 'theankan.live' ,'www.theankan.live', '10downloader.me', 'www.10downloader.me', 'watchlur.online', 'www.watchlur.online', 'y2meta.site', 'www.y2meta.site', 'ytmp3.software', 'www.ytmp3.software', 'www.vidbuddy.live', 'vidbuddy.live'];
+const allowedOrigins = ['theankan.live' ,'www.theankan.live', '10downloader.me', 'www.10downloader.me', 'watchlur.online', 'www.watchlur.online', 'y2meta.site', 'www.y2meta.site', 'ytmp3.software', 'www.ytmp3.software', 'www.vidbuddy.live', 'vidbuddy.live'];
 
 // App configurations
 app.use("/static", express.static("static")); // static file configuration

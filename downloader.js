@@ -1,4 +1,18 @@
-const env = require("dotenv").config();
+const Cluster = require('cluster');
+let allCores = require('os').cpus().length;
+
+if (Cluster.isMaster) {
+  while (allCores > 0){
+    Cluster.fork();
+    allCores--;
+  }
+  Cluster.on('exit', (worker, code, signal) => {
+    console.log(`Worker ${worker.process.pid} died`);
+    Cluster.fork();
+  });
+}
+else{
+  const env = require("dotenv").config();
 const express = require("express"); // Importing Express JS
 const app = express(); //Initelizing Express JS
 const BodyParser = require("body-parser"); // Importing Body-Parser Module
@@ -24,3 +38,4 @@ app.listen(port, () => {
 });
 
 module.exports.allowedOrigins = allowedOrigins;
+}

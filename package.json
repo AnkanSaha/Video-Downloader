@@ -37,7 +37,7 @@
     "postcss": "^8.4.23",
     "social-downloader-cherry": "^1.0.0",
     "tailwindcss": "^3.3.2",
-    "typed.js": "^2.0.12",
+    "typed.js": "^2.0.16",
     "video-url-link": "^0.1.5",
     "youtube-ext": "^1.0.11",
     "ytdownloader": "^1.0.2"

@@ -30,7 +30,7 @@
     "get-facebook-id": "^1.1.0",
     "get-youtube-id": "^1.0.1",
     "instagram-url-direct": "^1.0.13",
-    "mongoose": "^7.1.1",
+    "mongoose": "^7.2.0",
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "pm2": "^5.3.0",

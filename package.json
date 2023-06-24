@@ -4,9 +4,9 @@
   "description": "This website can download any youtube, facebook, instagram video instantly",
   "main": "downloader.js",
   "scripts": {
-    "start": "pm2 start ./core/downloader.js --name Downloader",
-    "stop": "pm2 stop ./core/downloader.js --name Downloader",
-    "dev": "nodemon ./core/downloader.js"
+    "start": "pm2 start ./source/Server/core/downloader.js --name Downloader",
+    "stop": "pm2 stop ./source/Server/core/downloader.js --name Downloader",
+    "dev": "nodemon ./source/Server/core/downloader.js"
   },
   "repository": {
     "type": "git",

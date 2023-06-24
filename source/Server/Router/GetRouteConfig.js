@@ -6,7 +6,7 @@ const GlobalDetails = require("../core/keys/keys"); // Importing Global Details
 Routes.get("/", (request, response) => {
   var Hostname = request.headers.host;
   if(GlobalDetails.AllowedURLS.includes(Hostname)){
-    response.status(200).sendFile('home.html', {root: `static/html/General`});
+    response.status(200).sendFile('home.html', {root: `source/static/html/General`});
   }
   else{
     response.status(405).send("You are not allowed to access this site.")
@@ -16,7 +16,7 @@ Routes.get("/", (request, response) => {
 Routes.get("/About", (request, response) => {
   var Hostname = request.headers.host;
   if(GlobalDetails.AllowedURLS.includes(Hostname)){
-    response.status(200).sendFile('AboutUs.html', {root: `static/html/General`});
+    response.status(200).sendFile('AboutUs.html', {root: `source/static/html/General`});
   }
   else{
     response.status(405).send("You are not allowed to access this site.")
@@ -26,7 +26,7 @@ Routes.get("/About", (request, response) => {
 Routes.get("/YoutubeMusicDownload", (request, response) => {
   var Hostname = request.headers.host;
   if(GlobalDetails.AllowedURLS.includes(Hostname)){
-    response.status(200).sendFile(`YouTubeMusic.html`, {root: `static/html/YouTube`});
+    response.status(200).sendFile(`YouTubeMusic.html`, {root: `source/static/html/YouTube`});
   }
   else{
     response.status(405).send("You are not allowed to access this site.")
@@ -36,7 +36,7 @@ Routes.get("/YoutubeMusicDownload", (request, response) => {
 Routes.get("/YoutubeVideoDownload", (request, response) => {
   var Hostname = request.headers.host;
   if(GlobalDetails.AllowedURLS.includes(Hostname)){
-    response.status(200).sendFile(`YouTubeVideo.html`, {root: `static/html/YouTube`});
+    response.status(200).sendFile(`YouTubeVideo.html`, {root: `source/static/html/YouTube`});
   }
   else{
     response.status(405).send("You are not allowed to access this site.")

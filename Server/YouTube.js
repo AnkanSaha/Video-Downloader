@@ -1,5 +1,7 @@
+// import Global Data
+const GlobalData = require('../core/keys/keys')
+
 const YouTubeDownloaderMusic = (Link, responses, requests) => {
-  var SendDataToServer = require("../Server/SendDataToServer");
   var VideoIDer = require("get-youtube-id");
   var Video_ID = VideoIDer(Link);
   (Video_ID);
@@ -7,11 +9,11 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
   const axios = require("axios");
   const options = {
     method: "GET",
-    url: "https://youtube-mp3-download1.p.rapidapi.com/dl",
+    url: GlobalData.RapidAPIDetails.YouTubeMusic_Link,
     params: { id: `${Video_ID}` },
     headers: {
-      "X-RapidAPI-Key": "aefb3fa51fmsha59d973a9f83424p149b2bjsn70bd6dd35de3",
-      "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
+      "X-RapidAPI-Key": GlobalData.RapidAPIDetails.RapidAPIKey,
+      "X-RapidAPI-Host": GlobalData.RapidAPIDetails.YouTubeMusic_HOST,
     },
   };
   axios.request(options).then((response) => {
@@ -25,15 +27,6 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
         Protocol: "Blockchain",
         title: response.data.title,
       };
-      SendDataToServer.SendToServer(
-        Link,
-        Video_ID,
-        "YouTube Music",
-        FinalResult.Status,
-        FinalResult.DownloadLink,
-        requests.ip,
-        requests.protocol
-      );
       responses.status(FinalResult.Status).json(FinalResult);
     } else if (response.data.msg == "fail") {
       var ErrorResult = {
@@ -63,16 +56,15 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
 const YouTubeDownloaderVideo = (Link, responses, requests) => {
   var getvideoIDer = require("get-youtube-id");
   var requester = require("axios");
-  var SendDataToServer = require("../Server/SendDataToServer");
   var VideoID = getvideoIDer(Link);
   (VideoID);
   const options = {
     method: "GET",
-    url: "https://youtube-video-download-info.p.rapidapi.com/dl",
+    url: GlobalData.RapidAPIDetails.YoutubeVideo_Link,
     params: { id: `${VideoID}` },
     headers: {
-      "X-RapidAPI-Key": "aefb3fa51fmsha59d973a9f83424p149b2bjsn70bd6dd35de3",
-      "X-RapidAPI-Host": "youtube-video-download-info.p.rapidapi.com",
+      "X-RapidAPI-Key": GlobalData.RapidAPIDetails.RapidAPIKey,
+      "X-RapidAPI-Host": GlobalData.RapidAPIDetails.YoutubeVideo_HOST,
     },
   };
   //   requesting
@@ -93,15 +85,6 @@ const YouTubeDownloaderVideo = (Link, responses, requests) => {
           Protocol: "Blockchain",
           thumbnail: responsedddata.thumb,
         };
-        SendDataToServer.SendToServer(
-          Link,
-          "No Video ID",
-          "YouTube Video",
-          FinalData.status,
-          FinalData.DownloadLink,
-          requests.ip,
-          requests.protocol
-        );
         responses.status(FinalData.status).json(FinalData);
       } else if (response.data.status != "ok") {
         var ErrorResult = {
@@ -118,5 +101,7 @@ const YouTubeDownloaderVideo = (Link, responses, requests) => {
 };
 
 // Module Export
-module.exports.YouTubeMusicDownload = YouTubeDownloaderMusic;
-module.exports.YouTubeVideoDownload = YouTubeDownloaderVideo;
+module.exports = {
+  YouTubeMusicDownload: YouTubeDownloaderMusic,
+  YouTubeVideoDownload: YouTubeDownloaderVideo,
+}; // Exporting Module

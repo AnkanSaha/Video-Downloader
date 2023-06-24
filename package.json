@@ -24,21 +24,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
-    "facebook-video-link": "^1.0.2",
-    "fb-downloader": "^1.0.3",
-    "get-facebook-id": "^1.1.0",
     "get-youtube-id": "^1.0.1",
-    "instagram-url-direct": "^1.0.13",
-    "mongoose": "^7.2.3",
-    "nodemon": "^2.0.22",
-    "path": "^0.12.7",
-    "pm2": "^5.3.0",
-    "postcss": "^8.4.24",
-    "social-downloader-cherry": "^1.0.0",
-    "tailwindcss": "^3.3.2",
     "typed.js": "^2.0.16",
-    "video-url-link": "^0.1.5",
-    "youtube-ext": "^1.0.11",
-    "ytdownloader": "^1.0.2"
+    "video-url-link": "^0.1.5"
   }
 }

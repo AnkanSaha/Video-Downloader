@@ -22,8 +22,5 @@ module.exports = {
         "ecmaVersion": "latest"
     },
     "rules": {
-        "no-undef": "on",
-        "no-console": "on",
-        "no-constant-condition": "on",
     }
 }

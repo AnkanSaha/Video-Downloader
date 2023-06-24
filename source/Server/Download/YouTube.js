@@ -1,7 +1,8 @@
+const {red} =require('outers') // import outer source
 // import Global Data
 const GlobalData = require('../core/keys/keys')
 
-const YouTubeDownloaderMusic = (Link, responses, requests) => {
+const YouTubeDownloaderMusic = (Link, responses) => {
   var VideoIDer = require("get-youtube-id");
   var Video_ID = VideoIDer(Link);
   (Video_ID);
@@ -36,24 +37,24 @@ const YouTubeDownloaderMusic = (Link, responses, requests) => {
       };
       responses.status(ErrorResult.status).json(ErrorResult);
     } else if (response.data.msg == "in progress") {
-      var ErrorResult = {
+      var ErrorResult1 = {
         DownloadLink: "Video is too long to download",
         status: 404,
         Protocol: "Blockchain",
       };
-      responses.status(ErrorResult.status).json(ErrorResult);
+      responses.status(ErrorResult.status).json(ErrorResult1);
     } else {
-      var ErrorResult = {
+      var ErrorResult2 = {
         DownloadLink: "Unknown error in server",
         status: 404,
         Protocol: "Blockchain",
       };
-      responses.status(ErrorResult.status).json(ErrorResult);
+      responses.status(ErrorResult.status).json(ErrorResult2);
     }
   });
 };
 
-const YouTubeDownloaderVideo = (Link, responses, requests) => {
+const YouTubeDownloaderVideo = (Link, responses) => {
   var getvideoIDer = require("get-youtube-id");
   var requester = require("axios");
   var VideoID = getvideoIDer(Link);
@@ -96,7 +97,7 @@ const YouTubeDownloaderVideo = (Link, responses, requests) => {
       }
     })
     .catch(function (error) {
-      console.error(error);
+      red(error);
     });
 };
 

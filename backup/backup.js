@@ -1,6 +1,7 @@
 const downloadInfoBackup = "backup/downloads.json";
 const UserDataBackup = "backup/Userdata.json";
 const UserRequestBackup = "backup/SaveUserRequest.json";
+const { green, red } = require("outers"); // Outers is a module that is installed in the project
 
 function SaveDownloadjson(Downloaddata) {
   var name = Downloaddata.VideoLink;
@@ -18,7 +19,7 @@ function SaveDownloadjson(Downloaddata) {
         if (err) {
           (err);
         } else {
-          ("Data Saved locally");
+          green("Data Saved locally");
         }
       });
     }
@@ -38,9 +39,9 @@ function SaveUserDataSend(UserData) {
       (json);
       fs.writeFile(UserDataBackup, JSON.stringify(json), "utf-8", (err) => {
         if (err) {
-          ("Data not saved locally");
+          red("Data not saved locally");
         } else {
-          ("Data Saved Locally");
+          green("Data Saved Locally");
         }
       });
     }

@@ -3,6 +3,8 @@ require('dotenv').config(); // Environment Variables
 // Allowed URLS
 const AllowedURLS = ['video.theankan.live', 'theankan.live', 'localhost:5500'];
 
+const PORT =    Number(process.env.PORT) || 5500; // Default Port No For App Start
+
 // Allowed Origins
 const CORS = {
     AllowedOrigins: String(process.env.CORSALLOWEDURL)
@@ -21,4 +23,5 @@ module.exports = {
     AllowedURLS: AllowedURLS,
     CORS : CORS,
     RapidAPIDetails: RapidAPI,
+    PORT: PORT
 }

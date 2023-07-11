@@ -16,9 +16,9 @@ console.log(AllowedURLS);
 const RapidAPI = {
     RapidAPIKey: String(process.env.RAPIDAPIKEY),
     YouTubeMusic_Link: String(process.env.YTMUSICURL),
-    YouTubeMusic_HOST: String(process.env.YTMUSICHOST),
+    YouTubeMusic_HOST: String(process.env.YTMUSICURL.split("https://").join("").split('/dl').join('')),
     YoutubeVideo_Link: String(process.env.YTVIDEOURL),
-    YoutubeVideo_HOST: String(process.env.YTVIDEOHOST),
+    YoutubeVideo_HOST: String(process.env.YTVIDEOURL.split("https://").join("").split('/dl').join('')),
 }
 
 // Module Export

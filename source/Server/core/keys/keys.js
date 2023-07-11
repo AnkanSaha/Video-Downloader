@@ -1,7 +1,7 @@
 require('dotenv').config(); // Environment Variables
 
 // Allowed URLS
-const AllowedURLS = ['video.theankan.live', 'theankan.live', 'localhost:5500'];
+const AllowedURLS = ['video.daluabari.in', 'daluabari.in', 'localhost:5500'];
 
 const PORT =    Number(process.env.PORT) || 5500; // Default Port No For App Start
 

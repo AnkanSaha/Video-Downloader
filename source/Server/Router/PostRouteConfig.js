@@ -1,33 +1,30 @@
 const express = require("express");
 const app = express.Router();
-const GlobalDetails = require("../core/keys/keys"); // Importing Global Details
+const RateLimit= require("express-rate-limit");
 
 // Importing Custom Modules
 const YouTubeDownloadFeatures = require("../Download/YouTube");
 
-// Global variables
+// Implementing Rate Limiter
+const limiter = new RateLimit({
+    windowMs: 1 * 60 * 1000, // 1 minute
+    max: 10, // 10 requests,
+    message: "Too many requests, please try again later.",
+    headers: true,
+    standardHeaders: true,
+    legacyHeaders: false
+});
+
+app.use(limiter);
 // API EndPoints
 app.post("/YouTubeMusic", (request, response) => {
-  var Hostname = request.headers.host;
-  if(GlobalDetails.AllowedURLS.includes(Hostname)){
     var TempUserLink = request.body.link;
-    (request.body);
     YouTubeDownloadFeatures.YouTubeMusicDownload(TempUserLink, response, request);
-  }
-  else{
-    response.status(405).send("You are not allowed to access this API.");
-  }
 });
 
 app.post("/YouTubeVideo", (request, response) => {
-  var Hostname = request.headers.host;
-  if(GlobalDetails.AllowedURLS.includes(Hostname)){
     var TempUserLink = request.body.link;
     (TempUserLink);
     YouTubeDownloadFeatures.YouTubeVideoDownload(TempUserLink, response, request);
-  }
-  else{
-    response.status(405).send("You are not allowed to access this API.");
-  }
 });
 module.exports = app;

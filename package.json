@@ -24,6 +24,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-rate-limit": "^7.1.0",
     "get-youtube-id": "^1.0.1",
     "outers": "^2.3.5",
     "typed.js": "^2.0.16",

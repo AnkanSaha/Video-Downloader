@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express.Router();
-const RateLimit= require("express-rate-limit");
+const RateLimit = require("express-rate-limit");
 
 // Importing Custom Modules
 const YouTubeDownloadFeatures = require("../Download/YouTube");
 
 // Implementing Rate Limiter
-const limiter = new RateLimit({
+const limiter = RateLimit({
     windowMs: 1 * 60 * 1000, // 1 minute
     max: 10, // 10 requests,
     message: "Too many requests, please try again later.",
@@ -16,6 +16,7 @@ const limiter = new RateLimit({
 });
 
 app.use(limiter);
+
 // API EndPoints
 app.post("/YouTubeMusic", (request, response) => {
     var TempUserLink = request.body.link;

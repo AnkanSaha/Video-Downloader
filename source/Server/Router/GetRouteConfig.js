@@ -1,9 +1,9 @@
 const { Router } = require("express");
 const Routes = Router()
-const RateLimit= require("express-rate-limit");
+const RateLimit = require("express-rate-limit");
 
 // Implementing Rate Limiter
-const limiter = new RateLimit({
+const limiter = RateLimit({
     windowMs: 1 * 60 * 1000, // 1 minute
     max: 10, // 10 requests,
     message: "Too many requests, please try again later.",

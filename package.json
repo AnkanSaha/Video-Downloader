@@ -2,7 +2,7 @@
   "name": "allSave",
   "version": "1.2.4",
   "description": "This website can download any youtube, facebook, instagram video instantly",
-  "main": "downloader.js",
+  "main": "./source/Server/core/downloader.js",
   "scripts": {
     "start": "pm2 start ./source/Server/core/downloader.js --name Downloader",
     "stop": "pm2 stop ./source/Server/core/downloader.js --name Downloader",
@@ -24,7 +24,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "express-rate-limit": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
     "get-youtube-id": "^1.0.1",
     "outers": "^2.3.5",
     "typed.js": "^2.0.16",

@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express.Router();
-const RateLimit= require("express-rate-limit");
+const RateLimit = require("express-rate-limit");
 
 // Importing Custom Modules
 const YouTubeDownloadFeatures = require("../Download/YouTube");

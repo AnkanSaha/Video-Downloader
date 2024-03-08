@@ -16,7 +16,7 @@ Ankan Saha made YouTube, facebook, Instagram video Downloader using NodeJS and m
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/AnkanSaha/Video-Downloader/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/AnkanSaha/Video-Downloader/tree/main)
 
 ## Deployment
 

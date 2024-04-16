@@ -18,7 +18,7 @@
   "author": "Ankan Saha",
   "license": "MIT License",
   "dependencies": {
-    "autoprefixer": "^10.4.14",
+    "autoprefixer": "^10.4.19",
     "axios": "^1.6.5",
     "bootstrap": "^5.3.0",
     "cors": "^2.8.5",

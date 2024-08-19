@@ -26,7 +26,7 @@
     "express": "^4.19.2",
     "express-rate-limit": "^7.1.5",
     "get-youtube-id": "^1.0.1",
-    "outers": "^5.4.9",
+    "outers": "^5.9.2",
     "typed.js": "^2.0.16",
     "video-url-link": "^0.1.5"
   }
